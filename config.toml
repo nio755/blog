@@ -1,4 +1,4 @@
-baseURL = "https://nio755.github.io/blog/"
+baseURL = "https://nio755.github.io/"
 languageCode = "zh-cn"
 theme = "dream"
 defaultContentLanguage = "zh"
