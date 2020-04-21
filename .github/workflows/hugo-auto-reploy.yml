@@ -1,12 +1,12 @@
 name: auto publish to my blog
 on:
   push:
-    branches: [ version ]
+    branches: [ master ]
 jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@version
+    - uses: actions/checkout@master
       # 安装hugo
     - name: setup hugo
       uses: peaceiris/actions-hugo@v2
