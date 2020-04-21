@@ -19,6 +19,9 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         publish_dir: ./public
-        publish_branch: gh-pages
+        publish_branch: master
+        external_repository: nio755/nio755.github.io
+        enable_jekyll: true
+        allow_empty_commit: true
