@@ -1,0 +1,12 @@
+baseURL = "https://nio755.github.io/"
+languageCode = "zh-cn"
+theme = "dream"
+defaultContentLanguage = "zh"
+title = "nio`s Blog"
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+
+[params]
+  author = "nio"
+  favicon = "./favicon-32.ico" #favicon.ico无法正常显示
