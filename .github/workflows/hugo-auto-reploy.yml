@@ -1,12 +1,12 @@
 name: auto publish to my blog
 on:
   push:
-    branches: [ master ]
+    branches: [ version ]
 jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@version
       # 安装hugo
     - name: setup hugo
       uses: peaceiris/actions-hugo@v2
@@ -19,9 +19,9 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        external_repository: nio755/nio755.github.io
         publish_dir: ./public
         publish_branch: master
-        external_repository: nio755/nio755.github.io
         enable_jekyll: true
         allow_empty_commit: true
